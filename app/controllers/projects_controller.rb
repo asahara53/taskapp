@@ -65,7 +65,6 @@ class ProjectsController < ApplicationController
 		def project_params
 			params[:project].permit(:title)
 		end
-	
 
 	def set_project
 		@project = Project.find(params[:id])

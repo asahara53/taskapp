@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 namespace :api, { format: 'json' } do
-    resources :search
+    resources :projects
   end
 
 resources :projects do
@@ -14,13 +14,7 @@ get 'projects/get_item/:id' => 'projects#get_item'
 post 'projects/post/:title' => 'projects#create_item'
 put 'projects/update/:id/:title' => 'projects#update_item'
 delete 'projects/delete/:id' => 'projects#destroy_item'
-post 'api/search/:key?:record' => 'search#search_item'
-
-#resources :projects do
-#  member do
-#    get 'get_item'
-#  end
-#end
+post 'api/search/:key/:record' => 'search#search_item'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

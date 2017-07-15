@@ -8,6 +8,7 @@ module Api
 
     def search_item
 		@projects = Project.all
+		render json: @projects
 	end
   end
 end
