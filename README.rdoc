@@ -1,3 +1,6 @@
+Ruby 2.3.1
+Ruby on Rails 4.2.1
+
 【APIの拡張】
 
 済1.POSTでitemを新規作成
