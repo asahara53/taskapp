@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-namespace :api, { format: 'json' } do
-    resources :projects
-  end
+namespace :api do
+	resources :find
+end
 
 resources :projects do
  resources :tasks, only: [:create, :destroy]
@@ -14,7 +14,7 @@ get 'projects/get_item/:id' => 'projects#get_item'
 post 'projects/post/:title' => 'projects#create_item'
 put 'projects/update/:id/:title' => 'projects#update_item'
 delete 'projects/delete/:id' => 'projects#destroy_item'
-post 'api/search/:key/:record' => 'search#search_item'
+get 'api/find/:record' => 'find#find_by'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
