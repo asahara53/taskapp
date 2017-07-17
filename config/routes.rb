@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
 namespace :api do
-	resources :find
+	resources :find do 
+		get '/title/:record' => 'find#find_by', on: :collection
+    get '/category/:record' => 'find#belongs', on: :collection
+	end
 end
 
 resources :projects do
@@ -14,7 +17,7 @@ get 'projects/get_item/:id' => 'projects#get_item'
 post 'projects/post/:title' => 'projects#create_item'
 put 'projects/update/:id/:title' => 'projects#update_item'
 delete 'projects/delete/:id' => 'projects#destroy_item'
-get 'api/find/:record' => 'find#find_by'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

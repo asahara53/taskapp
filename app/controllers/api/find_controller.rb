@@ -7,13 +7,14 @@ class Api::FindController < ApplicationController
     end
 
     def find_by
-		@projects = Project.find_by(title: ':record')
+		@projects = Project.find_by(title: params["record"])
+		binding.pry
 		render json: @projects
 	end
 
-	def show
-		#@projects = Project.where(title: ':record')
-		@projects = Project.where('title = :record', params[:title])
+	def belongs
+		@projects = Project.find_by(name: params["record"])
+		binding.pry
 		render json: @projects
 	end
 
