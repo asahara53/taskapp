@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
 
 namespace :api do
-	resources :find do 
+	resources :find do
 		get '/title/:record' => 'find#find_by', on: :collection
     get '/category/:record' => 'find#belongs', on: :collection
 	end
+    resources :categories do
+    get '/categories/:record' => 'categories#where', on: :collection
+  end
 end
 
 resources :projects do
