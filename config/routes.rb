@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-namespace :api do
+devise_for :users, :controllers => {
+ :registrations => 'users/registrations',
+ :sessions => 'users/sessions'
+}
+ namespace :api do
 	resources :find do
 		get '/title/:record' => 'find#find_by', on: :collection
     get '/category/:record' => 'find#belongs', on: :collection
