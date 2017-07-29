@@ -9,9 +9,10 @@
 		<%= link_to "[Delete]", project_path(project.id), method: :delete,
 		data:{
 			confirm:  "Are you sure?"
-			} %>		
-	</li>
+			} %>
 	<% end %>
+	</li>
+		<p><%= link_to "Add new", new_project_path %></p>
+
 </ul>
 
-<p><%= link_to "Add new", new_project_path %></p>

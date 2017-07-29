@@ -18,7 +18,7 @@ class ProjectsController < ApplicationController
 		@project = Project.new(project_params)
 		if @project.save
 			redirect_to projects_path
-		else 
+		else
 			render 'new'
 		end
 	end
@@ -63,11 +63,11 @@ class ProjectsController < ApplicationController
 
 	private
 		def project_params
-			params[:project].permit(:title)
+			params[:project].permit(:title, :category_id)
 		end
 
 	def set_project
 		@project = Project.find(params[:id])
 	end
-	
+
 end

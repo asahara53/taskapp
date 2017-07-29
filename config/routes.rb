@@ -10,7 +10,8 @@ devise_for :users, :controllers => {
     get '/category/:record' => 'find#belongs', on: :collection
 	end
     resources :categories do
-    get '/categories/:record' => 'categories#where', on: :collection
+    get '/categories/:record' => 'categories#hasmany', on: :collection
+    get '/categories/:id/:record' => 'categories#update', on: :collection
   end
 end
 
