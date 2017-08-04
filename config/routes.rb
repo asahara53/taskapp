@@ -25,6 +25,7 @@ get 'projects/get_item/:id' => 'projects#get_item'
 post 'projects/post/:title' => 'projects#create_item'
 put 'projects/update/:id/:title' => 'projects#update_item'
 delete 'projects/delete/:id' => 'projects#destroy_item'
+get 'ajax' => 'ajax#search'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
