@@ -1,12 +1,11 @@
 class AjaxController < ApplicationController
-	protect_from_forgery except: :some_action
+	 add_template_helper(ApplicationHelper)
 	def search
-		#選択ボックスに表示するカテゴリー名を取得
 		@projects = Project.select(:category_id).distinct
+		#表示するカテゴリー番号を取得
 	end
-
 	def result
-		#選択ボックスで指定されたカテゴリーでprojectsテーブルを検索
 		@projects = Project.where(category_id: params[:category_id])
+		#指定されたカテゴリーIDでprojectsテーブルを検索
 	end
 end

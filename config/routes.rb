@@ -19,13 +19,17 @@ resources :projects do
  resources :tasks, only: [:create, :destroy]
 end
 
+get '/ajax/search'
+post '/ajax/search'
+get '/ajax/result'
+post '/ajax/result'
 post 'projects/:project_id/tasks/:id/toggle' => 'tasks#toggle'
 root 'projects#index'
 get 'projects/get_item/:id' => 'projects#get_item'
 post 'projects/post/:title' => 'projects#create_item'
 put 'projects/update/:id/:title' => 'projects#update_item'
 delete 'projects/delete/:id' => 'projects#destroy_item'
-get 'ajax' => 'ajax#search'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
