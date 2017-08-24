@@ -9,20 +9,20 @@ Ruby on Rails 4.2.1
 
 済3.DELETEでitemを削除
 
-中4.itemをidではなく名前やpriceなどで検索できるAPI作成
+済4.itemをidではなく名前やpriceなどで検索できるAPI作成
 
-5.itemにカテゴリをつける(Association)
+済5.itemにカテゴリをつける(Association)
 
-6.カテゴリにひもづくitemsを取得するAPI作成(GET)
+済6.カテゴリにひもづくitemsを取得するAPI作成(GET)
 
-7.itemをカテゴリに紐づかせて新規作成するAPI(POST)
+済7.itemをカテゴリに紐づかせて新規作成するAPI(POST)
 
-8.itemのカテゴリだけを変更するAPI(PUT)
+済8.itemのカテゴリだけを変更するAPI(PUT)
 
 
 【認証機能】
 
-1.認証機能(新規登録・ログイン)を作ってみる
+済1.認証機能(新規登録・ログイン)を作ってみる
 Deviseってgem使ってもいいですし、自作してみるのもありかなと思います
 
 2.作った認証機能を元に各ユーザーにトークンを付与する
@@ -32,7 +32,7 @@ Deviseってgem使ってもいいですし、自作してみるのもありか�
 
 【JavaScript側を作ってみる】
 
-1.JavaScriptのAjaxを使って、上記で作ったAPIを利用してみる
+済1.JavaScriptのAjaxを使って、上記で作ったAPIを利用してみる
 
 2.帰ってきたJsonを元にJavaScriptでHTMLを作成し表示させる
 
